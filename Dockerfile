@@ -6,3 +6,5 @@ RUN a2enmod headers
 COPY src /var/www/html
 # Change ownership & permissions of /opt
 RUN chown www-data /opt -R && chmod 775 /opt -R
+# Create volume from /opt
+VOLUME /opt
