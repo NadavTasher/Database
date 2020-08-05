@@ -9,10 +9,6 @@ include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "
 include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Utility.php";
 
 Base::handle(function ($action, $parameters) {
-    // Make sure the root path exists
-    if (!file_exists(Utility::ROOT))
-        mkdir(Utility::ROOT);
-
     // Check scope parameter
     if (!isset($parameters->scope))
         throw new Error("Missing scope parameter");
