@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/License" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Build_and_Run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/Base.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/Utility.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +36,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/base" />
       <recent name="$PROJECT_DIR$/.idea/modules" />
     </key>
   </component>
@@ -50,8 +58,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596622438763</updated>
-      <workItem from="1596622439975" duration="852000" />
+      <workItem from="1596622439975" duration="8474000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial">
+      <created>1596623518018</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596623518018</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -61,8 +77,18 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596634535473">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596634535473" />
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1596623517709">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1596623517709" />
     <state x="832" y="453" width="417" height="207" key="Github.ShareDialog" timestamp="1596623401241">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -71,9 +97,25 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="795" y="251" width="320" height="611" key="Github.UntrackedFilesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596623406266" />
+    <state x="715" y="278" width="480" height="557" key="NewPhpClassDialog" timestamp="1596632438551">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="715" y="278" width="480" height="557" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596632438551" />
+    <state x="777" y="479" width="356" height="155" key="NewPhpFileDialog" timestamp="1596632533447">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="777" y="479" width="356" height="155" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596632533447" />
     <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1596622457096">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596622457096" />
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1596623519293">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1596623519293" />
+    <state x="862" y="461" width="544" height="190" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1596634529495">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="862" y="461" width="544" height="190" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.27.1920.1053@0.27.1920.1053" timestamp="1596634529495" />
   </component>
 </project>
