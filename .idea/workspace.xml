@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="36fbf7ac-e618-4d04-ad07-90838c7cc556" />
+  </component>
+  <component name="ProjectId" id="1ffwQU3vTgEgEtXMdad6CmulCU2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea/modules" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="" />
+      <created>1596622438763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596622438763</updated>
+      <workItem from="1596622439975" duration="647000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1596622457096">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596622457096" />
+  </component>
+</project>
