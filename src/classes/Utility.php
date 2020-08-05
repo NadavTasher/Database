@@ -18,7 +18,7 @@ class Utility
 
     /**
      * Creates writable paths.
-     * @param string $path Path name
+     * @param string $path Path
      * @param string $base Base directory
      * @return string Path
      */
@@ -41,6 +41,10 @@ class Utility
         return $base . DIRECTORY_SEPARATOR . $path;
     }
 
+    /**
+     * Removes paths recursively.
+     * @param string $path Path
+     */
     public static function remove($path)
     {
         // Check whether the path is a directory
@@ -57,6 +61,11 @@ class Utility
         }
     }
 
+    /**
+     * Inserts paths.
+     * @param string $path Path
+     * @param mixed $contents Contents
+     */
     public static function insert($path, $contents = null)
     {
         // Check whether contents are null
