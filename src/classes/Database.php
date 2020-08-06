@@ -51,7 +51,7 @@ class Database
         }
 
         // Make sure the requested scope is within the control scope of the token
-        if (count($authorized) < count($requested))
+        if (count($authorized) >= count($requested))
             throw new Error("Unauthorized token scope");
 
         foreach ($authorized as $index => $value)

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="" />
+    <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/classes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Database.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +94,7 @@
       <workItem from="1596715563109" duration="101000" />
       <workItem from="1596715676276" duration="22122000" />
       <workItem from="1596746646874" duration="52000" />
+      <workItem from="1596746778118" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1596623518018</created>
@@ -184,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596746664754</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Permission fix">
+      <created>1596746886401</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1596746886401</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +217,8 @@
     <MESSAGE value="New database implementation with tokens and access scopes" />
     <MESSAGE value="API updates" />
     <MESSAGE value="Remove fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove fix" />
+    <MESSAGE value="Permission fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Permission fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596733730021">
