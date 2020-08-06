@@ -6,12 +6,12 @@
  **/
 
 /**
- * Storage API for application databases.
+ * Database API for application databases.
  */
-class Storage
+class Database
 {
 
-    // Storage root
+    // Database root
     private const ROOT = "/opt";
 
     /**

@@ -6,8 +6,8 @@
  **/
 
 include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Base.php";
-include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Storage.php";
+include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Database.php";
 
 Base::handle(function ($action, $parameters) {
-    return Storage::handle($action, $parameters);
+    return Database::handle($action, $parameters);
 });

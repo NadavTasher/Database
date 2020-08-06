@@ -10,6 +10,34 @@
  */
 class Base
 {
+
+    /**
+     * Calls remote APIs with URL and parameters.
+     * @param string $url URL
+     * @param string $action Action
+     * @param array $parameters Parameters
+     * @return mixed Result
+     */
+    public static function call($url, $action, $parameters)
+    {
+        // Create query
+        $query = http_build_query($parameters);
+        // Create the URL
+        $url = "$url/?$action&$query";
+        // Execute the request
+        $contents = file_get_contents($url);
+        // Parse the contents as JSON
+        $contents = json_decode($contents);
+        // Check contents structure
+        if (!isset($contents->status) || !isset($contents->result))
+            throw new Error("API response malformed");
+        // Throw error
+        if (!$contents->status)
+            throw new Error($contents->result);
+        // Return result
+        return $contents->result;
+    }
+
     /**
      * Handles API calls by handing them over to the callback.
      * @param callable $callback Callback to handle the request
