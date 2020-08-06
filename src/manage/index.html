@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2020 Nadav Tasher
+ https://github.com/NadavTasher/HeadlessTemplate/
+-->
+<html row lang="en">
+<head>
+    <!-- Charset -->
+    <meta charset="UTF-8"/>
+    <!-- App Description -->
+    <meta name="description" content="Database manager.">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, minimal-ui"/>
+    <!-- Mobile -->
+    <meta name="theme-color" content="#FFFFFF"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Mobile Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-title" content="Manager"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Icons -->
+    <link rel="icon" href="https://nadavtasher.github.io/Template/src/resources/images/icons/icon.png"/>
+    <link rel="apple-touch-icon" href="https://nadavtasher.github.io/Template/src/resources/images/icons/icon_apple.png"/>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://nadavtasher.github.io/Template/src/resources/styles/style.css"/>
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://nadavtasher.github.io/Template/src/modules/module.js"></script>
+    <!-- App Title -->
+    <title>Manager</title>
+    <!-- No Script -->
+    <noscript></noscript>
+    <!-- App Sources -->
+    <style type="text/css">
+        :root {
+            --theme: #FFFFFF;
+            --passive: #333344;
+            --active: #777788;
+            --coaster: #DDDDEE;
+        }
+
+        body {
+            max-width: 500px;
+        }
+    </style>
+    <script type="text/javascript">
+        function load() {
+            Module.load("Template:UI", "Global:Popup").then(function () {
+                if (localStorage.getItem("token") !== null)
+                    UI.write("token", localStorage.getItem("token"));
+            });
+        }
+
+        function execute(show = false) {
+            // Assemble the request
+            let action = UI.read("action");
+            let parameters = {};
+
+            // Check parameters and append to object
+            if (UI.read("token").length > 0) {
+                parameters.token = UI.read("token");
+
+                // Save token to localStorage
+                localStorage.setItem("token", UI.read("token"));
+
+                if (UI.read("scope").length > 0) {
+                    parameters.scope = UI.read("scope");
+
+                    if (UI.read("table").length > 0) {
+                        parameters.table = UI.read("table");
+
+                        if (UI.read("entry").length > 0) {
+                            parameters.entry = UI.read("entry");
+
+                            if (UI.read("key").length > 0) {
+                                parameters.key = UI.read("key");
+
+                                if (UI.read("value").length > 0) {
+                                    parameters.value = UI.read("value");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Create a form
+            let form = new FormData();
+
+            // Append parameters to form
+            for (let key in parameters) {
+                if (parameters.hasOwnProperty(key))
+                    form.append(key, parameters[key]);
+            }
+
+            // Send the request
+            fetch("/?" + action.toLowerCase(), {
+                method: "post",
+                body: form
+            }).then(response => {
+                // Parse response as JSON
+                response.json().then(result => {
+                    // Check the result's integrity
+                    if (result.hasOwnProperty("status") && result.hasOwnProperty("result")) {
+                        // Show a popup
+                        Popup.toast(result["status"] ? "Successful execution." : "Unsuccessful execution.");
+
+                        // Show results
+                        if (show) {
+                            // Write output
+                            UI.write("output", result["result"]);
+
+                            // Show results page
+                            UI.view("results");
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+    <!-- Additional -->
+</head>
+<body onload="load()" column>
+<div id="welcome">
+    <!-- Titles -->
+    <p large left>Enter token</p>
+    <p small left>Please enter your database access token to continue.</p>
+    <!-- Inputs -->
+    <input small left id="token" placeholder="Token"/>
+    <!-- Buttons -->
+    <button small right onclick="UI.view('home');">Continue</button>
+</div>
+<div id="home" hidden>
+    <!-- Titles -->
+    <p large left>Enter information</p>
+    <p small left>Please enter the information you want to modify.</p>
+    <!-- Inputs -->
+    <select button small left style="-webkit-appearance: none;" id="action">
+        <option>Check</option>
+        <option>Insert</option>
+        <option>Remove</option>
+        <option>Read</option>
+        <option>Write</option>
+    </select>
+    <div row>
+        <input small left id="scope" placeholder="Scope / Service"/>
+        <input small left id="table" placeholder="Table / API"/>
+    </div>
+    <div row>
+        <input small left id="entry" placeholder="Entry / Row"/>
+        <input small left id="key" placeholder="Key / Cell"/>
+    </div>
+    <div row>
+        <input small left id="value" placeholder="Value"/>
+    </div>
+    <!-- Buttons -->
+    <div row>
+        <button small left onclick="execute(false);">Push</button>
+        <button small right onclick="execute(true);">Pull</button>
+    </div>
+</div>
+<div id="results" hidden>
+    <!-- Titles -->
+    <p large left>Copy results</p>
+    <p small left>You may copy the results from the previous action.</p>
+    <!-- Inputs -->
+    <textarea button small left style="height: 40vh;" id="output"></textarea>
+</div>
+</body>
+</html>
