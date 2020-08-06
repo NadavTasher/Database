@@ -173,7 +173,7 @@ class Database
 
             // Unlink child paths
             foreach ($paths as $value)
-                self::unlink($value);
+                self::unlink($path . DIRECTORY_SEPARATOR . $value);
 
             // Remove directory
             rmdir($path);
