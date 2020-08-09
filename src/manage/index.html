@@ -50,7 +50,20 @@
             });
         }
 
-        function execute(show = false) {
+        function issue() {
+            // Send an issue request to the database
+            Database.execute("issue", {
+                password: UI.read("password")
+            }).then(value => {
+                // Write token to UI
+                UI.write("token", value);
+
+                // Change page
+                UI.view("access");
+            });
+        }
+
+        function execute() {
             // Assemble the request
             let action = UI.read("action");
             let parameters = {};
@@ -83,56 +96,95 @@
                 }
             }
 
-            // Create a form
-            let form = new FormData();
-
-            // Append parameters to form
-            for (let key in parameters) {
-                if (parameters.hasOwnProperty(key))
-                    form.append(key, parameters[key]);
-            }
-
-            // Send the request
-            fetch("/?" + action.toLowerCase(), {
-                method: "post",
-                body: form
-            }).then(response => {
-                // Parse response as JSON
-                response.json().then(result => {
-                    // Check the result's integrity
-                    if (result.hasOwnProperty("status") && result.hasOwnProperty("result")) {
-                        // Show a popup
-                        Popup.toast(result["status"] ? "Successful execution." : "Unsuccessful execution.");
-
-                        // Show results
-                        if (show) {
-                            // Write output
-                            UI.write("output", result["result"]);
-
-                            // Show results page
-                            UI.view("results");
-                        }
+            let callback = (result) => {
+                Popup.alert("Results", result.substring(0, 20)).then(() => {
+                    // Download result
+                    if (result.length > 20) {
+                        let element = document.createElement("a");
+                        element.setAttribute("href", URL.createObjectURL(new Blob([result], {type: "text/plain"})));
+                        element.setAttribute("download", Date.now() + ".txt");
+                        element.click();
                     }
                 });
-            });
+            };
+
+            // Call the database
+            Database.execute(action, parameters).then(callback).catch(callback);
+        }
+
+        class Database {
+
+            /**
+             * Executes a database request.
+             * @param action Action
+             * @param parameters Parameters
+             * @returns Promise
+             */
+            static execute(action, parameters) {
+                // Create a promise
+                return new Promise((resolve, reject) => {
+                    // Create a form
+                    let form = new FormData();
+
+                    // Append parameters to form
+                    for (let key in parameters) {
+                        if (parameters.hasOwnProperty(key))
+                            form.append(key, parameters[key]);
+                    }
+
+                    // Send the request
+                    fetch("/?" + action.toLowerCase(), {
+                        method: "post",
+                        body: form
+                    }).then(response => {
+                        // Parse response as JSON
+                        response.json().then(result => {
+                            // Check the result's integrity
+                            if (result.hasOwnProperty("status") && result.hasOwnProperty("result")) {
+                                // Callbacks
+                                if (result["status"]) {
+                                    resolve(result["result"]);
+                                } else {
+                                    reject(result["result"]);
+                                }
+                            } else {
+                                reject("API response malformed");
+                            }
+                        });
+                    });
+                });
+            }
         }
     </script>
     <!-- Additional -->
 </head>
 <body onload="load()" column>
-<div id="welcome">
+<div id="access">
     <!-- Titles -->
-    <p large left>Enter token</p>
-    <p small left>Please enter your database access token to continue.</p>
+    <p large left>Access database</p>
+    <p small left>Please provide your database access token.</p>
     <!-- Inputs -->
     <input small left id="token" placeholder="Token"/>
     <!-- Buttons -->
-    <button small right onclick="UI.view('home');">Continue</button>
+    <button small right onclick="UI.view('manage');">Continue</button>
+    <!-- Help -->
+    <p tiny center onclick="UI.view('issue');">Don't have one?</p>
 </div>
-<div id="home" hidden>
+<div id="issue" hidden>
     <!-- Titles -->
-    <p large left>Enter information</p>
-    <p small left>Please enter the information you want to modify.</p>
+    <p large left>Issue token</p>
+    <p small left>Please provide your database password.</p>
+    <!-- Inputs -->
+    <input small left id="password" placeholder="Password"/>
+    <!-- Buttons -->
+    <button small right onclick="issue();">Continue</button>
+    <!-- Help -->
+    <p tiny center onclick="UI.view('access');">Already have one?</p>
+</div>
+<div id="manage" hidden>
+    <!-- Titles -->
+    <p large left>Manage database</p>
+    <p small left>Please provide the information you want to modify.</p>
     <!-- Inputs -->
     <select button small left style="-webkit-appearance: none;" id="action">
         <option>Check</option>
@@ -153,10 +205,7 @@
         <input small left id="value" placeholder="Value"/>
     </div>
     <!-- Buttons -->
-    <div row>
-        <button small left onclick="execute(false);">Push</button>
-        <button small right onclick="execute(true);">Pull</button>
-    </div>
+    <button small center onclick="execute();">Execute</button>
 </div>
 <div id="results" hidden>
     <!-- Titles -->

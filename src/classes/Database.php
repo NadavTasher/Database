@@ -11,7 +11,7 @@
 class Database
 {
 
-    // Database root
+    // Database properties
     private const ROOT = "/opt";
 
     /**
