@@ -97,12 +97,21 @@
             }
 
             let callback = (result) => {
-                Popup.alert("Results", result.substring(0, 20)).then(() => {
+                // Assemble a string result
+                let string = result.toString();
+
+                // Show result
+                Popup.alert("Results", string.substring(0, 20)).then(() => {
                     // Download result
-                    if (result.length > 20) {
+                    if (string.length > 20) {
+                        // Create element
                         let element = document.createElement("a");
+
+                        // Set attributes
                         element.setAttribute("href", URL.createObjectURL(new Blob([result], {type: "text/plain"})));
                         element.setAttribute("download", Date.now() + ".txt");
+
+                        // Click on element
                         element.click();
                     }
                 });
