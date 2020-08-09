@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Token.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/manage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/manage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +105,7 @@
       <workItem from="1596746646874" duration="52000" />
       <workItem from="1596746778118" duration="422000" />
       <workItem from="1596751258729" duration="1991000" />
-      <workItem from="1596963182264" duration="4655000" />
+      <workItem from="1596963182264" duration="5002000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1596623518018</created>
@@ -222,7 +219,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596752916417</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="New token class, updated database class and newer UI">
+      <created>1596969019502</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1596969019502</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Removed results page">
+      <created>1596969038914</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1596969038914</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +258,9 @@
     <MESSAGE value="Remove fix" />
     <MESSAGE value="Permission fix" />
     <MESSAGE value="Created manager page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created manager page" />
+    <MESSAGE value="New token class, updated database class and newer UI" />
+    <MESSAGE value="Removed results page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed results page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596965119250">
@@ -262,10 +275,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="303" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596740693409" />
-    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1596752916072">
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1596969038574">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1596752916072" />
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1596969038574" />
     <state x="803" y="314" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596635021728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -290,10 +303,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596622457096" />
-    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2" timestamp="1596752919633">
+    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2" timestamp="1596969039082">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1596752919633" />
+    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1596969039082" />
     <state x="862" y="461" width="544" height="190" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1596634529495">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
