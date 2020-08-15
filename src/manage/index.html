@@ -21,9 +21,8 @@
     <!-- Icons -->
     <link rel="icon" href="https://nadavtasher.github.io/Template/bundle/src/resources/images/icons/icon.png"/>
     <link rel="apple-touch-icon" href="https://nadavtasher.github.io/Template/bundle/src/resources/images/icons/icon_apple.png"/>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://nadavtasher.github.io/Template/bundle/src/resources/styles/style.css"/>
-    <!-- Modules -->
+    <!-- Modules & Resources -->
+    <link rel="stylesheet" href="https://nadavtasher.github.io/Template/styles/style.css"/>
     <script type="text/javascript" src="https://nadavtasher.github.io/Template/modules/module.js"></script>
     <!-- App Title -->
     <title>Manager</title>
@@ -43,7 +42,6 @@
         }
     </style>
     <script type="text/javascript">
-
         let UI;
 
         async function load() {
@@ -100,28 +98,27 @@
             }
 
             let callback = (result) => {
-                // Assemble a string result
-                let string = result.toString();
+                // Write output
+                UI.write("output", result);
 
-                // Show result
-                alert(string.substring(0, 20));
-
-                // Download result
-                if (string.length > 20) {
-                    // Create element
-                    let element = document.createElement("a");
-
-                    // Set attributes
-                    element.setAttribute("href", URL.createObjectURL(new Blob([result], {type: "text/plain"})));
-                    element.setAttribute("download", Date.now() + ".txt");
-
-                    // Click on element
-                    element.click();
-                }
+                // Show results
+                UI.view("results");
             };
 
             // Call the database
             Database.execute(action, parameters).then(callback).catch(callback);
+        }
+
+        function download() {
+            // Create element
+            let element = document.createElement("a");
+
+            // Set attributes
+            element.setAttribute("href", URL.createObjectURL(new Blob([UI.read("output")], {type: "text/plain"})));
+            element.setAttribute("download", Date.now() + ".txt");
+
+            // Click on element
+            element.click();
         }
 
         class Database {
@@ -218,6 +215,15 @@
     </div>
     <!-- Buttons -->
     <button small center onclick="execute();">Execute</button>
+</div>
+<div id="results" hidden>
+    <!-- Titles -->
+    <p large left>Execution results</p>
+    <p small left>Here are the results for the action you performed.</p>
+    <!-- Results -->
+    <p small left id="output"></p>
+    <!-- Buttons -->
+    <button small center onclick="download();">Download as file</button>
 </div>
 </body>
 </html>
