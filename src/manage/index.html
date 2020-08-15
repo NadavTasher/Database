@@ -19,12 +19,12 @@
     <meta name="apple-mobile-web-app-title" content="Manager"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <!-- Icons -->
-    <link rel="icon" href="https://nadavtasher.github.io/Template/src/resources/images/icons/icon.png"/>
-    <link rel="apple-touch-icon" href="https://nadavtasher.github.io/Template/src/resources/images/icons/icon_apple.png"/>
+    <link rel="icon" href="https://nadavtasher.github.io/Template/bundle/src/resources/images/icons/icon.png"/>
+    <link rel="apple-touch-icon" href="https://nadavtasher.github.io/Template/bundle/src/resources/images/icons/icon_apple.png"/>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://nadavtasher.github.io/Template/src/resources/styles/style.css"/>
-    <!-- Scripts -->
-    <script type="text/javascript" src="https://nadavtasher.github.io/Template/src/modules/module.js"></script>
+    <link rel="stylesheet" href="https://nadavtasher.github.io/Template/bundle/src/resources/styles/style.css"/>
+    <!-- Modules -->
+    <script type="text/javascript" src="https://nadavtasher.github.io/Template/modules/module.js"></script>
     <!-- App Title -->
     <title>Manager</title>
     <!-- No Script -->
@@ -43,11 +43,14 @@
         }
     </style>
     <script type="text/javascript">
-        function load() {
-            Module.load("Template:UI", "Global:Popup").then(function () {
-                if (localStorage.getItem("token") !== null)
-                    UI.write("token", localStorage.getItem("token"));
-            });
+
+        let UI;
+
+        async function load() {
+            UI = await Module.import("UI");
+
+            if (localStorage.getItem("token") !== null)
+                UI.write("token", localStorage.getItem("token"));
         }
 
         function issue() {
@@ -101,20 +104,20 @@
                 let string = result.toString();
 
                 // Show result
-                Popup.alert("Results", string.substring(0, 20)).then(() => {
-                    // Download result
-                    if (string.length > 20) {
-                        // Create element
-                        let element = document.createElement("a");
+                alert(string.substring(0, 20));
 
-                        // Set attributes
-                        element.setAttribute("href", URL.createObjectURL(new Blob([result], {type: "text/plain"})));
-                        element.setAttribute("download", Date.now() + ".txt");
+                // Download result
+                if (string.length > 20) {
+                    // Create element
+                    let element = document.createElement("a");
 
-                        // Click on element
-                        element.click();
-                    }
-                });
+                    // Set attributes
+                    element.setAttribute("href", URL.createObjectURL(new Blob([result], {type: "text/plain"})));
+                    element.setAttribute("download", Date.now() + ".txt");
+
+                    // Click on element
+                    element.click();
+                }
             };
 
             // Call the database
