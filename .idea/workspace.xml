@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/classes/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/classes/Token.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +74,11 @@
           <option name="envVars">
             <list>
               <DockerEnvVarImpl>
-                <option name="name" value="KEY" />
+                <option name="name" value="TOKEN_SECRET" />
                 <option name="value" value="12345678" />
               </DockerEnvVarImpl>
               <DockerEnvVarImpl>
-                <option name="name" value="PASSWORD" />
+                <option name="name" value="DATABASE_PASSWORD" />
                 <option name="value" value="12345678" />
               </DockerEnvVarImpl>
             </list>
@@ -121,7 +122,7 @@
       <workItem from="1597409304347" duration="143000" />
       <workItem from="1597501228941" duration="2405000" />
       <workItem from="1597577414255" duration="546000" />
-      <workItem from="1598789602488" duration="118000" />
+      <workItem from="1598789602488" duration="982000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1596623518018</created>
@@ -305,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598789613348</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="New database password env variable">
+      <created>1598789732986</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1598789732986</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Token API update">
+      <created>1598790011648</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1598790011648</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,13 +352,15 @@
     <MESSAGE value="Stringifyed result" />
     <MESSAGE value="New database manager" />
     <MESSAGE value="New token secret env variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="New token secret env variable" />
+    <MESSAGE value="New database password env variable" />
+    <MESSAGE value="Token API update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Token API update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597577837421">
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598790244025">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597577837421" />
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1598790244025" />
     <state x="1132" y="27" width="613" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596739626769">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -352,10 +369,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="303" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596740693409" />
-    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1598789612994">
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1598790011324">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1598789612994" />
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1598790011324" />
     <state x="803" y="314" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596635021728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -380,10 +397,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596622457096" />
-    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2" timestamp="1598789613621">
+    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2" timestamp="1598790012110">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1598789613621" />
+    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1598790012110" />
     <state x="862" y="461" width="544" height="190" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1596634529495">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
