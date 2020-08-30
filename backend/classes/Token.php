@@ -35,8 +35,8 @@ class Token
         $tokenArray = new stdClass();
 
         // Insert token parameters
-        $tokenArray[Token::PARAMETER_EXPIRY] = $tokenExpiry;
-        $tokenArray[Token::PARAMETER_CONTENT] = $tokenContent;
+        $tokenArray->${Token::PARAMETER_EXPIRY} = $tokenExpiry;
+        $tokenArray->${Token::PARAMETER_CONTENT} = $tokenContent;
 
         // Create token string
         $tokenString = base64_encode(json_encode($tokenArray));
@@ -81,8 +81,8 @@ class Token
         $tokenArray = json_decode(base64_decode($tokenString));
 
         // Extract token parameters
-        $tokenExpiry = $tokenArray[Token::PARAMETER_EXPIRY];
-        $tokenContent = $tokenArray[Token::PARAMETER_CONTENT];
+        $tokenExpiry = $tokenArray->${Token::PARAMETER_EXPIRY};
+        $tokenContent = $tokenArray->${Token::PARAMETER_CONTENT};
 
         // Make sure the token is not expired
         if ($tokenExpiry !== null && time() > intval($tokenExpiry))
