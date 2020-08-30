@@ -9,7 +9,7 @@ include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "
 include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Token.php";
 include_once __DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Database.php";
 
-const VARIABLE = "PASSWORD";
+const VARIABLE = "DATABASE_PASSWORD";
 
 Base::handle(function ($action, $parameters) {
     // Check whether the action requires a master token creation
