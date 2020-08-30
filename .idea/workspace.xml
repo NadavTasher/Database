@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/classes/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/classes/Token.php" afterDir="false" />
-    </list>
+    <list default="true" id="db354856-32dd-4aa3-bdec-1ef61f98d9c8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +119,7 @@
       <workItem from="1597409304347" duration="143000" />
       <workItem from="1597501228941" duration="2405000" />
       <workItem from="1597577414255" duration="546000" />
-      <workItem from="1598789602488" duration="982000" />
+      <workItem from="1598789602488" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1596623518018</created>
@@ -320,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598790011648</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Token fixes">
+      <created>1598790620911</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1598790620911</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +358,8 @@
     <MESSAGE value="New token secret env variable" />
     <MESSAGE value="New database password env variable" />
     <MESSAGE value="Token API update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Token API update" />
+    <MESSAGE value="Token fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Token fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598790244025">
@@ -369,10 +374,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="303" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596740693409" />
-    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1598790011324">
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2" timestamp="1598790620560">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1598790011324" />
+    <state x="554" y="114" width="802" height="886" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1598790620560" />
     <state x="803" y="314" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596635021728">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -397,10 +402,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596622457096" />
-    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2" timestamp="1598790012110">
+    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2" timestamp="1598790623577">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1598790012110" />
+    <state x="555" y="289" width="790" height="542" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1598790623577" />
     <state x="862" y="461" width="544" height="190" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1596634529495">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
